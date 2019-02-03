@@ -1,0 +1,222 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ----------------- ^^^^^^^^ RESET SCRIPT ^^^^^^^ --------------------------------*/
+/* --------------------------------------------------------------------------------*/
+
+
+
+html  {
+  background-size: cover;
+  width: 100%;
+}
+
+
+/* CSS Grid Setup */
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	height: auto;
+	grid-template-areas: 
+	"nav nav nav nav"
+	"banner banner banner banner"
+	"banner banner banner banner"
+	"sec1 sec1 sec1 sec2"
+	"sec1 sec1 sec1 sec2"
+	"sec1 sec1 sec1 sec3"
+	"sec1 sec1 sec1 sec3"
+	"sec1 sec1 sec1 sec4"
+	"sec1 sec1 sec1 sec4"
+	"footer footer footer footer";
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+}
+
+/* Navigation Styling */
+.navbar {
+	grid-area: nav;
+	border: 1px solid black;
+}
+
+.navbar ul {
+  padding: 1% 1% 1% 10%;
+  margin: 0;
+}
+
+.navbar ul li {
+  display: inline-block;
+  width: 24%;
+  font-size: 2em;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 1000px) {
+	.navbar ul li {
+		display: block;
+		text-align: center;
+		padding: 0% 0% 0% 30%;
+	}
+}
+
+.navbar ul li a {
+  text-decoration: none;
+}
+
+
+
+
+/* Hero Banner Styling */
+.banner {
+	grid-area: banner;
+	border: 1px solid black;
+}
+
+
+
+.banner img {
+  height: 400px;
+  width: 100%;
+
+}
+
+
+
+
+/* Section 1 Styling */
+.sec1 {
+	grid-area: sec1;
+	border: 1px solid black;
+}
+
+.sec1 p {
+	text-align: center;
+	font-size: 2em;
+	line-height: 1.2em;
+}
+
+
+
+/* Section 2 Styling */
+.sec2 {
+	grid-area: sec2;
+	border: 1px solid black;
+}
+
+.sec2 h1 {
+	text-align: center;
+	font-size: 2em;
+	color: blue;
+}
+
+.sec2 ol {
+	padding: 1% 1% 1% 10%;
+	margin: 0;
+}
+
+.sec2 ol li {
+	text-align: center;
+  font-size: 2em;
+	letter-spacing: 3px;
+	line-height: 2em;
+}
+
+
+/* Section 3 Styling */
+.sec3 {
+	grid-area: sec3;
+	border: 1px solid black;
+}
+
+.sec3 h1 {
+	text-align: center;
+	font-size: 2em;
+	color: red;
+}
+
+.sec3 button {
+	width: 100%;
+  height: 30%;
+  font-size: 2em;
+}
+
+/* Section 4 Styling */
+.sec4 {
+	grid-area: sec4;
+	border: 1px solid black;
+}
+
+/* Footer Styling */
+.footer {
+	grid-area: footer;
+	border: 1px solid black;
+}
+
+.footer h3 {
+	font-size: 2em;
+	text-align: center;
+	color: blueviolet;
+}
+
+@media (max-width: 1000px) {
+	.container {
+			grid-template-areas:
+			"nav nav nav"
+			"banner banner banner"
+			"banner banner banner"
+			"sec1 sec1 sec1"
+			"sec1 sec1 sec1"
+			"sec1 sec1 sec1"
+			"sec1 sec1 sec1"
+			"sec1 sec1 sec1"
+			"sec1 sec1 sec1"
+			"sec2 sec3 sec4"
+			"sec2 sec3 sec4"
+			"footer footer footer";
+	}
+}
